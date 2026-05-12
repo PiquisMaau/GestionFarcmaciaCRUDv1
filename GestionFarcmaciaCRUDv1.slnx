@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="GestionFarmaciaDatos/GestionFarmaciaDatos.csproj" />
+  <Project Path="GestionFarmaciaEntidades/GestionFarmaciaEntidades.csproj" />
+  <Project Path="GestionFarmaciaLogicaNegocio/GestionFarmaciaLogicaNegocio.csproj" />
+  <Project Path="GestionFarmaciaPresentacion/GestionFarmaciaPresentacion.csproj" />
+</Solution>
