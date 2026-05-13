@@ -37,7 +37,6 @@ namespace GestionFarmaciaDatos
 
                             foreach (var item in carrito)
                             {
-                                // Insertar en DetallesVentas
                                 using (SqlCommand cmdDetalle = new SqlCommand())
                                 {
                                     cmdDetalle.Connection = conexion;
@@ -55,7 +54,6 @@ namespace GestionFarmaciaDatos
                                     cmdDetalle.ExecuteNonQuery();
                                 }
 
-                                // 3. ACTUALIZAR EL STOCK DEL PRODUCTO
                                 using (SqlCommand cmdStock = new SqlCommand())
                                 {
                                     cmdStock.Connection = conexion;
@@ -72,13 +70,11 @@ namespace GestionFarmaciaDatos
                             }
                         }
 
-                        // Si llegamos a esta línea sin errores, confirmamos todos los cambios en la BD
                         transaccion.Commit();
                         return true;
                     }
                     catch (Exception ex)
                     {
-                        // Si ocurre cualquier error, deshacemos todos los cambios
                         transaccion.Rollback();
                         return false;
                     }

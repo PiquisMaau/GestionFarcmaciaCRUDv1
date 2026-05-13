@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="GestionFarmaciaDatos/GestionFarmaciaDatos.csproj" />
-  <Project Path="GestionFarmaciaEntidades/GestionFarmaciaEntidades.csproj" />
-  <Project Path="GestionFarmaciaLogicaNegocio/GestionFarmaciaLogicaNegocio.csproj" />
-  <Project Path="GestionFarmaciaPresentacion/GestionFarmaciaPresentacion.csproj" />
+  <Project Path="GestionFarmaciaDatos/GestionFarmaciaDatos.csproj" Id="5b364976-0793-4978-bdf2-93013bf01e3f" />
+  <Project Path="GestionFarmaciaEntidades/GestionFarmaciaEntidades.csproj" Id="b9c40a81-7a7c-4c69-aa01-e90df4a97f3a" />
+  <Project Path="GestionFarmaciaLogicaNegocio/GestionFarmaciaLogicaNegocio.csproj" Id="ecf39819-02dd-4c34-8b0f-cdc438c781fe" />
+  <Project Path="GestionFarmaciaPresentacion/GestionFarmaciaPresentacion.csproj" Id="90d13664-100c-4688-bb58-28cb5db47852" />
 </Solution>

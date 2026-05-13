@@ -217,5 +217,37 @@ namespace GestionFarmaciaDatos
                 return false;
             }
         }
+        public ClientesEntidades BuscarPorCedula(string cedula)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Properties.Settings.Default.ConexionFarmaciaBD))
+                {
+                    conexion.Open();
+                    string query = "SELECT * FROM Clientes WHERE CedulaRuc = @cedula";
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@cedula", cedula);
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.Read())
+                            {
+                                return new ClientesEntidades
+                                {
+                                    ClienteID = Convert.ToInt32(dr["ClienteID"]),
+                                    Nombre1 = dr["Nombre1"].ToString(),
+                                    Apellido1 = dr["Apellido1"].ToString(),
+                                    Telefono = dr["Telefono"].ToString(),
+                                    Direccion = dr["Direccion"].ToString(),
+                                    Correo = dr["Correo"].ToString()
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch { }
+            return null;
+        }
     }
 }

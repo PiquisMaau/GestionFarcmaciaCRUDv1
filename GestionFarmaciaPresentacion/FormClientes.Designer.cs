@@ -79,6 +79,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(900, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -98,13 +99,13 @@
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // vistaPreviaToolStripMenuItem
             // 
             this.vistaPreviaToolStripMenuItem.Name = "vistaPreviaToolStripMenuItem";
-            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.vistaPreviaToolStripMenuItem.Text = "Vista Previa";
             // 
             // verToolStripMenuItem

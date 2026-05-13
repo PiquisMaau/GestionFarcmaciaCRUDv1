@@ -32,8 +32,9 @@
             this.labelNumeroComprobante = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.txtb_Total = new System.Windows.Forms.TextBox();
             this.txtb_Cantidad = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtb_NombreComercial = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dgv_Venta = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
             this.btn_Productos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -77,7 +78,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Venta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -88,7 +89,7 @@
             this.groupBox3.Controls.Add(this.labelNumeroComprobante);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dtpFechaVenta);
             this.groupBox3.Location = new System.Drawing.Point(23, 66);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
@@ -128,16 +129,17 @@
             this.label16.TabIndex = 12;
             this.label16.Text = "Fecha de Venta";
             // 
-            // dateTimePicker1
+            // dtpFechaVenta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 28);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtpFechaVenta.Location = new System.Drawing.Point(134, 28);
+            this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaVenta.Name = "dtpFechaVenta";
+            this.dtpFechaVenta.Size = new System.Drawing.Size(151, 20);
+            this.dtpFechaVenta.TabIndex = 11;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btn_Agregar);
             this.groupBox2.Controls.Add(this.txtb_Total);
             this.groupBox2.Controls.Add(this.txtb_Cantidad);
@@ -155,7 +157,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtb_NombreComercial);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.dgv_Venta);
+            this.groupBox2.Controls.Add(this.dgvDetalleVenta);
             this.groupBox2.Controls.Add(this.btn_Productos);
             this.groupBox2.Location = new System.Drawing.Point(23, 337);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -166,12 +168,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de Venta";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Procesar Venta";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(704, 42);
+            this.btn_Agregar.Location = new System.Drawing.Point(685, 42);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(56, 33);
+            this.btn_Agregar.Size = new System.Drawing.Size(75, 33);
             this.btn_Agregar.TabIndex = 12;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
@@ -252,7 +263,6 @@
             this.txtb_Subtotal.Size = new System.Drawing.Size(76, 20);
             this.txtb_Subtotal.TabIndex = 5;
             this.txtb_Subtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtb_Subtotal.TextChanged += new System.EventHandler(this.txtb_Subtotal_TextChanged);
             // 
             // label11
             // 
@@ -331,23 +341,24 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Nombre Comercial";
             // 
-            // dgv_Venta
+            // dgvDetalleVenta
             // 
-            this.dgv_Venta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Venta.Location = new System.Drawing.Point(15, 80);
-            this.dgv_Venta.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Venta.Name = "dgv_Venta";
-            this.dgv_Venta.RowHeadersWidth = 51;
-            this.dgv_Venta.RowTemplate.Height = 24;
-            this.dgv_Venta.Size = new System.Drawing.Size(745, 179);
-            this.dgv_Venta.TabIndex = 1;
+            this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(15, 80);
+            this.dgvDetalleVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDetalleVenta.Name = "dgvDetalleVenta";
+            this.dgvDetalleVenta.RowHeadersWidth = 51;
+            this.dgvDetalleVenta.RowTemplate.Height = 24;
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(745, 179);
+            this.dgvDetalleVenta.TabIndex = 1;
+            this.dgvDetalleVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Venta_CellContentClick);
             // 
             // btn_Productos
             // 
-            this.btn_Productos.Location = new System.Drawing.Point(704, 17);
+            this.btn_Productos.Location = new System.Drawing.Point(685, 17);
             this.btn_Productos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Productos.Name = "btn_Productos";
-            this.btn_Productos.Size = new System.Drawing.Size(56, 19);
+            this.btn_Productos.Size = new System.Drawing.Size(75, 19);
             this.btn_Productos.TabIndex = 0;
             this.btn_Productos.Text = "Productos";
             this.btn_Productos.UseVisualStyleBackColor = true;
@@ -378,6 +389,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::GestionFarmaciaPresentacion.Properties.Resources.search;
             this.pictureBox1.Location = new System.Drawing.Point(643, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -565,6 +577,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(823, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // FormVentas
             // 
@@ -583,7 +596,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Venta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -600,7 +613,7 @@
         private System.Windows.Forms.Label labelNumeroComprobante;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaVenta;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.TextBox txtb_Total;
@@ -619,7 +632,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtb_NombreComercial;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dgv_Venta;
+        private System.Windows.Forms.DataGridView dgvDetalleVenta;
         private System.Windows.Forms.Button btn_Productos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -643,5 +656,6 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button button1;
     }
 }
