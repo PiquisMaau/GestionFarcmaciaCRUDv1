@@ -54,6 +54,7 @@
             this.dgv_Venta = new System.Windows.Forms.DataGridView();
             this.btn_Productos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtbCorreo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtbDireccion = new System.Windows.Forms.TextBox();
@@ -74,13 +75,12 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Venta)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -252,6 +252,7 @@
             this.txtb_Subtotal.Size = new System.Drawing.Size(76, 20);
             this.txtb_Subtotal.TabIndex = 5;
             this.txtb_Subtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtb_Subtotal.TextChanged += new System.EventHandler(this.txtb_Subtotal_TextChanged);
             // 
             // label11
             // 
@@ -375,11 +376,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(643, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // txtbCorreo
             // 
             this.txtbCorreo.Location = new System.Drawing.Point(379, 84);
             this.txtbCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtbCorreo.Name = "txtbCorreo";
+            this.txtbCorreo.ReadOnly = true;
             this.txtbCorreo.Size = new System.Drawing.Size(172, 20);
             this.txtbCorreo.TabIndex = 11;
             // 
@@ -398,6 +410,7 @@
             this.txtbDireccion.Location = new System.Drawing.Point(379, 53);
             this.txtbDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtbDireccion.Name = "txtbDireccion";
+            this.txtbDireccion.ReadOnly = true;
             this.txtbDireccion.Size = new System.Drawing.Size(172, 20);
             this.txtbDireccion.TabIndex = 9;
             // 
@@ -416,6 +429,7 @@
             this.txtbTelefono.Location = new System.Drawing.Point(379, 23);
             this.txtbTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtbTelefono.Name = "txtbTelefono";
+            this.txtbTelefono.ReadOnly = true;
             this.txtbTelefono.Size = new System.Drawing.Size(172, 20);
             this.txtbTelefono.TabIndex = 7;
             // 
@@ -434,6 +448,7 @@
             this.txtbNombres.Location = new System.Drawing.Point(122, 84);
             this.txtbNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtbNombres.Name = "txtbNombres";
+            this.txtbNombres.ReadOnly = true;
             this.txtbNombres.Size = new System.Drawing.Size(117, 20);
             this.txtbNombres.TabIndex = 5;
             // 
@@ -452,6 +467,7 @@
             this.txtbApellidos.Location = new System.Drawing.Point(122, 53);
             this.txtbApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtbApellidos.Name = "txtbApellidos";
+            this.txtbApellidos.ReadOnly = true;
             this.txtbApellidos.Size = new System.Drawing.Size(117, 20);
             this.txtbApellidos.TabIndex = 3;
             // 
@@ -550,16 +566,6 @@
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(643, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,9 +586,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Venta)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

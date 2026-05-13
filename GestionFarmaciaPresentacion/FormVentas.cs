@@ -16,5 +16,10 @@ namespace GestionFarmaciaPresentacion
         {
             InitializeComponent();
         }
+
+        private void txtb_Subtotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

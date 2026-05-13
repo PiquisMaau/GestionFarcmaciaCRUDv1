@@ -42,13 +42,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ClienteDatos.cs" />
+    <Compile Include="ProductosDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="VentasDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GestionFarmaciaEntidades\GestionFarmaciaEntidades.csproj">
       <Project>{b9c40a81-7a7c-4c69-aa01-e90df4a97f3a}</Project>
       <Name>GestionFarmaciaEntidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
