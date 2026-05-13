@@ -108,6 +108,7 @@
             this.labelNumeroComprobante.Size = new System.Drawing.Size(16, 13);
             this.labelNumeroComprobante.TabIndex = 14;
             this.labelNumeroComprobante.Text = "...";
+            this.labelNumeroComprobante.Click += new System.EventHandler(this.labelNumeroComprobante_Click);
             // 
             // label17
             // 
@@ -176,6 +177,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Procesar Venta";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Agregar
             // 
@@ -186,6 +188,7 @@
             this.btn_Agregar.TabIndex = 12;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // txtb_Total
             // 
@@ -362,6 +365,7 @@
             this.btn_Productos.TabIndex = 0;
             this.btn_Productos.Text = "Productos";
             this.btn_Productos.UseVisualStyleBackColor = true;
+            this.btn_Productos.Click += new System.EventHandler(this.btn_Productos_Click);
             // 
             // groupBox1
             // 
@@ -397,6 +401,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtbCorreo
             // 
@@ -592,6 +597,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormVentas";
             this.Text = "FormVentas";
+            this.Load += new System.EventHandler(this.FormVentas_Load_1);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

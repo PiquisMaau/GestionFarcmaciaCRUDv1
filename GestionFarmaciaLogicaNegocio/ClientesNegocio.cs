@@ -54,8 +54,7 @@ namespace GestionFarmaciaLogicaNegocio
 
         public static ClientesEntidades BuscarPorCedula(string cedula) 
         {
-            ClienteDatos datos = new ClienteDatos();
-            return datos.CargarClientePorID();
+            return ClienteDatos.BuscarPorCedula(cedula);
         }
     }
 }

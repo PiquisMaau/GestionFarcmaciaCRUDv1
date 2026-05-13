@@ -217,7 +217,7 @@ namespace GestionFarmaciaDatos
                 return false;
             }
         }
-        public ClientesEntidades BuscarPorCedula(string cedula)
+        public static ClientesEntidades BuscarPorCedula(string cedula)
         {
             try
             {
@@ -232,11 +232,24 @@ namespace GestionFarmaciaDatos
                         {
                             if (dr.Read())
                             {
+                                //return new ClientesEntidades
+                                //{
+                                //    ClienteID = Convert.ToInt32(dr["ClienteID"]),
+                                //    Nombre1 = dr["Nombre1"].ToString(),
+                                //    Apellido1 = dr["Apellido1"].ToString(),
+                                //    Telefono = dr["Telefono"].ToString(),
+                                //    Direccion = dr["Direccion"].ToString(),
+                                //    Correo = dr["Correo"].ToString()
+                                //};
                                 return new ClientesEntidades
                                 {
                                     ClienteID = Convert.ToInt32(dr["ClienteID"]),
+                                    CedulaRuc = dr["CedulaRuc"].ToString(),
                                     Nombre1 = dr["Nombre1"].ToString(),
+                                    Nombre2 = dr["Nombre2"].ToString(),
                                     Apellido1 = dr["Apellido1"].ToString(),
+                                    Apellido2 = dr["Apellido2"].ToString(),
+                                    FechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]),
                                     Telefono = dr["Telefono"].ToString(),
                                     Direccion = dr["Direccion"].ToString(),
                                     Correo = dr["Correo"].ToString()
@@ -248,6 +261,11 @@ namespace GestionFarmaciaDatos
             }
             catch { }
             return null;
+        }
+
+        public ClientesEntidades CargarClientePorID()
+        {
+            throw new NotImplementedException();
         }
     }
 }

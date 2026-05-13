@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{90D13664-100C-4688-BB58-28CB5DB47852}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GestionFarmaciaPresentacion</RootNamespace>
     <AssemblyName>GestionFarmaciaPresentacion</AssemblyName>
@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arranque.cs" />
     <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +123,6 @@
       <Project>{ecf39819-02dd-4c34-8b0f-cdc438c781fe}</Project>
       <Name>GestionFarmaciaLogicaNegocio</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\WIN_20260218_12_49_46_Pro.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shopping-cart.png" />

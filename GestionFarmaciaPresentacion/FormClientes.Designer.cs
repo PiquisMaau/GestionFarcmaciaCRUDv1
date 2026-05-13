@@ -122,7 +122,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxId
             // 
@@ -140,7 +139,6 @@
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "CEDULA";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBoxCedulaa
             // 
@@ -236,6 +234,7 @@
             this.buttonGuardar.TabIndex = 14;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // buttonEliminar
             // 
@@ -245,6 +244,7 @@
             this.buttonEliminar.TabIndex = 15;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonNuevo
             // 
@@ -254,6 +254,7 @@
             this.buttonNuevo.TabIndex = 16;
             this.buttonNuevo.Text = "Nuevo";
             this.buttonNuevo.UseVisualStyleBackColor = true;
+            this.buttonNuevo.Click += new System.EventHandler(this.buttonNuevo_Click);
             // 
             // label8
             // 
@@ -358,6 +359,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(624, 671);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox2
             // 
@@ -382,6 +384,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormClientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.FormClientes_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

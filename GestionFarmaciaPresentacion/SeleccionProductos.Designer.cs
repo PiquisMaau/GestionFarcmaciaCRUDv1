@@ -58,6 +58,8 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(769, 362);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick_1);
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick_1);
             // 
             // label1
             // 
@@ -88,6 +90,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "SeleccionProductos";
             this.Text = "SeleccionProductos";
+            this.Load += new System.EventHandler(this.SeleccionProductos_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
