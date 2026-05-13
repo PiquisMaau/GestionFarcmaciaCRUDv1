@@ -145,18 +145,7 @@ namespace GestionFarmaciaPresentacion
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                if (e.RowIndex >= 0)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ClienteID"].Value.ToString());
-                    CargarValoresClientePorId(id);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al seleccionar el cliente: " + ex.Message);
-            }
+            
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -186,6 +175,31 @@ namespace GestionFarmaciaPresentacion
         {
             CargarListadoClientesEnDataGridView();
 
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea Salir de Clientes?",
+               "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ClienteID"].Value.ToString());
+                    CargarValoresClientePorId(id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar el cliente: " + ex.Message);
+            }
         }
     }
 }

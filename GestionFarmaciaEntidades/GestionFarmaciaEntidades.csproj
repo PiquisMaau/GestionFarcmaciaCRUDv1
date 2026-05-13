@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientesEntidades.cs" />
+    <Compile Include="DashboardEntidades.cs" />
     <Compile Include="DetallesVentasEntidades.cs" />
     <Compile Include="PrductosEntidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -113,6 +113,7 @@
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
             this.verToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.verToolStripMenuItem.Text = "Volver";
+            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -143,7 +144,7 @@
             // textBoxCedulaa
             // 
             this.textBoxCedulaa.Location = new System.Drawing.Point(17, 110);
-            this.textBoxCedulaa.MaxLength = 25;
+            this.textBoxCedulaa.MaxLength = 10;
             this.textBoxCedulaa.Name = "textBoxCedulaa";
             this.textBoxCedulaa.Size = new System.Drawing.Size(185, 20);
             this.textBoxCedulaa.TabIndex = 3;
@@ -359,6 +360,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(624, 671);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox2
