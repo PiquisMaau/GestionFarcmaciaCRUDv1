@@ -169,5 +169,14 @@ namespace GestionFarmaciaPresentacion
             EncerarCampos();
 
         }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea Salir del registro de un Producto?",
+               "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

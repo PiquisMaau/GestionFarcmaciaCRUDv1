@@ -70,14 +70,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(959, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(959, 28);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // preferenciasToolStripMenuItem
@@ -86,26 +86,27 @@
             this.imprimirToolStripMenuItem,
             this.vistaPreviaToolStripMenuItem});
             this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
-            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
             this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // vistaPreviaToolStripMenuItem
             // 
             this.vistaPreviaToolStripMenuItem.Name = "vistaPreviaToolStripMenuItem";
-            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.vistaPreviaToolStripMenuItem.Text = "Vista Previa";
             // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.verToolStripMenuItem.Text = "Volver";
+            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
@@ -125,6 +126,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(698, 507);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -193,7 +195,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 327);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 17;
             this.label4.Text = "Precio";
             // 
@@ -202,7 +204,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(21, 392);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.Size = new System.Drawing.Size(37, 15);
             this.label10.TabIndex = 17;
             this.label10.Text = "Stock";
             // 
@@ -211,7 +213,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(21, 269);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.Size = new System.Drawing.Size(79, 15);
             this.label8.TabIndex = 17;
             this.label8.Text = "Presentación";
             // 
@@ -250,7 +252,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.Size = new System.Drawing.Size(130, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "Fechas de Adquisición";
             // 
@@ -267,7 +269,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(105, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre Genérico";
             // 
@@ -284,7 +286,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(21, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre Comercial";
             // 
@@ -301,7 +303,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ProductoID";
             // 
